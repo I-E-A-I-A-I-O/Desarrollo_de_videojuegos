@@ -1,0 +1,21 @@
+sceneSetups:
+- path: Assets/Scenes/TitleScreen.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
+- path: Assets/Scenes/Multiplayer_11.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/SinglePlayer_11.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/Multiplayer_4.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/SinglePlayer_4.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
