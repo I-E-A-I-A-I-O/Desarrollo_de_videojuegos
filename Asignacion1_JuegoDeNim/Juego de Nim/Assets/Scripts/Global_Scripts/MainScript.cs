@@ -94,7 +94,7 @@ public class MainScript : MonoBehaviour
     public void EndTurnLabelChange()
     {
         if (_gameOver) return;
-        if (_cubes.Count <= 1) return;
+        if (_cubes.Count < 1) return;
         _turn = _turn == 0 ? 1 : 0;
         ChangeLabel();
         if ((SceneManager.GetActiveScene().name.Equals("SinglePlayer_11") || SceneManager.GetActiveScene().name.Equals("SinglePlayer_4")) && 
@@ -106,34 +106,20 @@ public class MainScript : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (!(_cubes.Count <= 1)) return;
+        if (!(_cubes.Count < 1)) return;
         _gameOver = true;
         _endgamePanel.SetActive(true);
-        Debug.Log(_turn);
+        Debug.Log(_turn); 
         switch (_turn)
         {
             case 0:
                 {
-                    if (SceneManager.GetActiveScene().name.Equals("SinglePlayer_11") || SceneManager.GetActiveScene().name.Equals("SinglePlayer_4"))
-                    {
-                        _endgameText.GetComponent<Text>().text = "Ganador: Jugador 1";
-                    }
-                    else
-                    {
-                        _endgameText.GetComponent<Text>().text = "Ganador: Jugador 2";
-                    }
+                    _endgameText.GetComponent<Text>().text = "Ganador: Jugador 1";
                     break;
                 }
             case 1:
                 {
-                    if (SceneManager.GetActiveScene().name.Equals("SinglePlayer_11") || SceneManager.GetActiveScene().name.Equals("SinglePlayer_4"))
-                    {
-                        _endgameText.GetComponent<Text>().text = "Ganador: Jugador 2";
-                    }
-                    else
-                    {
-                        _endgameText.GetComponent<Text>().text = "Ganador: Jugador 1";
-                    }
+                    _endgameText.GetComponent<Text>().text = "Ganador: Jugador 2";
                     break;
                 }
         }

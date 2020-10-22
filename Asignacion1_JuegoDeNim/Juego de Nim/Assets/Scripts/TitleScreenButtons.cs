@@ -42,4 +42,9 @@ public class TitleScreenButtons : MonoBehaviour
     {
         SceneManager.LoadScene("SinglePlayer_4");
     }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
 }
